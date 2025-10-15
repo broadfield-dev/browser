@@ -16,19 +16,25 @@ Built with Gradio and Playwright, it can be run as a standalone web UI, a REST A
 
 ## Installation
 
-You can install the package directly from GitHub using `pip`.
+There are two steps to install the package and its dependencies.
+
+**Step 1: Install the Python Package**
+
+Install the package directly from GitHub using `pip`. This will also install all necessary Python dependencies like `playwright`, `gradio`, and `beautifulsoup4`.
 
 ```bash
 pip install git+https://github.com/broadfield-dev/browser.git
 ```
 
-This will also install all necessary Python dependencies like `playwright`, `gradio`, and `beautifulsoup4`. After installation, you must install the Playwright browser binaries:
+**Step 2: Install Browser Binaries**
+
+After the package is installed, you must download the browser binaries that Playwright uses for automation.
 
 ```bash
 playwright install
 ```
 
-This command downloads the browser engines (Chromium, Firefox, WebKit) that the tool needs to operate.
+This command only needs to be run once after the initial installation.
 
 ## How to Use
 
@@ -42,7 +48,7 @@ Import the `perform_web_browse` function to integrate web search and scraping di
 
 ```python
 import asyncio
-from browser_api.app import perform_web_browse # Assuming the package is installed as browser_api
+from browser.app import perform_web_browse
 
 async def main():
     # --- Example 1: Perform a web search ---
