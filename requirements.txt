@@ -1,0 +1,4 @@
+gradio
+playwright
+beautifulsoup4
+lxml
