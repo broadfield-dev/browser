@@ -1,5 +1,5 @@
 import os
-os.system("playwright install")
+#os.system("playwright install")
 import re
 import urllib.parse
 import asyncio
